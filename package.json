@@ -11,5 +11,8 @@
   "devDependencies": {
     "electron-prebuilt": "^0.30.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "font-awesome": "^4.4.0"
+  }
 }
