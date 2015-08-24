@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+  <style type="text/css" media="screen">
+    .back {
+      width: 300px;
+      height: 40px;
+      text-align: center;
+      border-radius: 2.5px;
+      opacity: 0.4;
+      /*HUD Background*/
+      background-color: #202035;
+    }
+    .content {
+      position: relative;
+      z-index: 100;
+      margin-top: -40px;
+      margin-left: -1px;
+      width: 300px;
+      height: 40px;
+      border-radius: 5px;
+      /*HUD Border*/
+      border: 1px solid #202540;
+    }
+    .title {
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 100;
+      font-size: 14px;
+      line-height: 1em;
+      float: left;
+      text-align: center;
+      width: 100%;
+      margin: 7px 0 5px 0;
+      /*HUD Text color*/
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="back"></div>
+<div class="content">
+  <div class="title" id="label">deskhud</div>
+</div>
+<script>
+  require('ipc').on('moduleUpdate', function(message) {
+    document.getElementById("label").innerHTML = message;
+  });
+</script>
+</body>
+</html>
